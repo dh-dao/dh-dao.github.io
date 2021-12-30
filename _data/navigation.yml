@@ -1,9 +1,11 @@
 # main links
 main:
+  - title: "Quick-Start Guide"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
-     url: /about/
-  - title: "Embedded with Me"
-     url: /embedded/
+     url: https://dh-dao.github.io/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
