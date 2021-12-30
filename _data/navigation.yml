@@ -2,9 +2,9 @@
 main:
   - title: "About"
      url: /about/
-  - title: "Embedded"
+  - title: "Embedded with Me"
      url: /embedded/
-  #- title: "Sample Collections"
+  # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
