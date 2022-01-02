@@ -21,6 +21,8 @@ The push button on the STM32F3-Discovery is connected to the GPIO-Port `GPIOA` a
 
 # Initialize GPIO
 ## My code with HAL library
+
+`gpio.c -> MX_GPIO_Init()`
 ```c
   /*Configure GPIO pin : PtPin */ /*User Button pin*/
   GPIO_InitStruct.Pin = B1_Pin;
@@ -29,6 +31,7 @@ The push button on the STM32F3-Discovery is connected to the GPIO-Port `GPIOA` a
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 ```
 
+`main.c`
 ```c
 static void EXTI0_Config(void)
 {
@@ -45,6 +48,28 @@ static void EXTI0_Config(void)
   HAL_NVIC_EnableIRQ(EXTI0_IRQn);
 }
 ```
+
+```c
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if (GPIO_Pin == B1_Pin)
+  {
+      printf("Push Button (Blue) pushed. External Interupt activate\n");
+      UserPressButton++;
+      if (UserPressButton > 0x02)
+      {
+        UserPressButton = 0;
+      }
+      Set_All_LEDs(GPIO_PIN_RESET);
+      HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+      HAL_GPIO_TogglePin(LD10_GPIO_Port, LD10_Pin);
+    
+
+    // change mode in state machine
+  }
+}
+```
+
 
 ## Demo Code
 `stm32f3-discovery.c`
