@@ -8,6 +8,10 @@ tags:
   - interrupt 
   - stm32
   - stm32f3 discovery
+last_modified_at: 2022-01
+toc: true
+toc_label: "Menu"
+toc_icon: "columns"
 --- 
 
 # PB on STM32F3-Discovery
@@ -17,13 +21,13 @@ The push button on the STM32F3-Discovery is connected to the GPIO-Port `GPIOA` a
 
 # Initialize GPIO
 ## My code with HAL library
-{% highlight c %}
+```c
   /*Configure GPIO pin : PtPin */ /*User Button pin*/
   GPIO_InitStruct.Pin = B1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
-{% endhighlight %}
+```
 
 ```c
 static void EXTI0_Config(void)
