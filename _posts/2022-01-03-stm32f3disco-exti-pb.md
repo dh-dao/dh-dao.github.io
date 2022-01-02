@@ -25,7 +25,7 @@ The push button on the STM32F3-Discovery is connected to the GPIO-Port `GPIOA` a
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 {% endhighlight %}
 
-```C
+```c
 static void EXTI0_Config(void)
 {
   /* Initialize EXTI_LINE */
@@ -44,7 +44,7 @@ static void EXTI0_Config(void)
 
 ## Demo Code
 `stm32f3-discovery.c`
-```C
+```c
 void STM_EVAL_PBInit(Button_TypeDef Button, ButtonMode_TypeDef Button_Mode)
 {
   GPIO_InitTypeDef GPIO_InitStructure;
