@@ -8,7 +8,7 @@ tags:
   - interrupt 
   - stm32
   - stm32f3 discovery
-last_modified_at: 2022-01
+last_modified_at: 2022-01-02T16:27:40-04:00
 toc: true
 toc_label: "Menu"
 toc_icon: "columns"
