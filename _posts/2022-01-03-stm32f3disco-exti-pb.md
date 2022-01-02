@@ -10,13 +10,13 @@ tags:
   - stm32f3 discovery
 --- 
 
-## PB on STM32F3-Discovery
+# PB on STM32F3-Discovery
 The push button on the STM32F3-Discovery is connected to the GPIO-Port `GPIOA` and GPIO-Pin `GPIO_PIN_0`, or for short pin `A0`. In the setting of this pin in CubeMX, i cannot set the GPIO_Mode option to external interrupt. So i took a look to the example code and demo code of this board. 
 
 ![cubemx screenshot](/assets/pinA0.png)
 
-## Initialize GPIO
-### My code with HAL library
+# Initialize GPIO
+## My code with HAL library
 {% highlight c %}
   /*Configure GPIO pin : PtPin */ /*User Button pin*/
   GPIO_InitStruct.Pin = B1_Pin;
@@ -42,7 +42,7 @@ static void EXTI0_Config(void)
 }
 ```
 
-### Demo Code
+## Demo Code
 `stm32f3-discovery.c`
 ```C
 void STM_EVAL_PBInit(Button_TypeDef Button, ButtonMode_TypeDef Button_Mode)
